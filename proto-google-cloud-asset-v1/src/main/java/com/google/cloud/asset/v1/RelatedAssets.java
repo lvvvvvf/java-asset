@@ -22,11 +22,15 @@ package com.google.cloud.asset.v1;
  *
  *
  * <pre>
+ * DEPRECATED. This message only presents for the purpose of
+ * backward-compatibility. The server will never populate this message in
+ * responses.
  * The detailed related assets with the `relationship_type`.
  * </pre>
  *
  * Protobuf type {@code google.cloud.asset.v1.RelatedAssets}
  */
+@java.lang.Deprecated
 public final class RelatedAssets extends com.google.protobuf.GeneratedMessageV3
     implements
     // @@protoc_insertion_point(message_implements:google.cloud.asset.v1.RelatedAssets)
@@ -109,6 +113,8 @@ public final class RelatedAssets extends com.google.protobuf.GeneratedMessageV3
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -432,6 +438,9 @@ public final class RelatedAssets extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
+   * DEPRECATED. This message only presents for the purpose of
+   * backward-compatibility. The server will never populate this message in
+   * responses.
    * The detailed related assets with the `relationship_type`.
    * </pre>
    *

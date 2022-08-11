@@ -115,6 +115,8 @@ public final class RelatedAsset extends com.google.protobuf.GeneratedMessageV3
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -344,10 +346,10 @@ public final class RelatedAsset extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getAssetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, asset_);
     }
-    if (!getAssetTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, assetType_);
     }
     for (int i = 0; i < ancestors_.size(); i++) {
@@ -362,10 +364,10 @@ public final class RelatedAsset extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getAssetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, asset_);
     }
-    if (!getAssetTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, assetType_);
     }
     {

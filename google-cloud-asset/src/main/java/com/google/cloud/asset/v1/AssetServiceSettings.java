@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 package com.google.cloud.asset.v1;
 
 import static com.google.cloud.asset.v1.AssetServiceClient.ListAssetsPagedResponse;
+import static com.google.cloud.asset.v1.AssetServiceClient.ListSavedQueriesPagedResponse;
 import static com.google.cloud.asset.v1.AssetServiceClient.SearchAllIamPoliciesPagedResponse;
 import static com.google.cloud.asset.v1.AssetServiceClient.SearchAllResourcesPagedResponse;
 
@@ -25,6 +26,7 @@ import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
+import com.google.api.gax.httpjson.InstantiatingHttpJsonChannelProvider;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
@@ -57,6 +59,8 @@ import javax.annotation.Generated;
  * <p>For example, to set the total timeout of batchGetAssetsHistory to 30 seconds:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated for illustrative purposes only.
+ * // It may require modifications to work in your environment.
  * AssetServiceSettings.Builder assetServiceSettingsBuilder = AssetServiceSettings.newBuilder();
  * assetServiceSettingsBuilder
  *     .batchGetAssetsHistorySettings()
@@ -164,6 +168,40 @@ public class AssetServiceSettings extends ClientSettings<AssetServiceSettings> {
     return ((AssetServiceStubSettings) getStubSettings()).analyzeMoveSettings();
   }
 
+  /** Returns the object with the settings used for calls to createSavedQuery. */
+  public UnaryCallSettings<CreateSavedQueryRequest, SavedQuery> createSavedQuerySettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).createSavedQuerySettings();
+  }
+
+  /** Returns the object with the settings used for calls to getSavedQuery. */
+  public UnaryCallSettings<GetSavedQueryRequest, SavedQuery> getSavedQuerySettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).getSavedQuerySettings();
+  }
+
+  /** Returns the object with the settings used for calls to listSavedQueries. */
+  public PagedCallSettings<
+          ListSavedQueriesRequest, ListSavedQueriesResponse, ListSavedQueriesPagedResponse>
+      listSavedQueriesSettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).listSavedQueriesSettings();
+  }
+
+  /** Returns the object with the settings used for calls to updateSavedQuery. */
+  public UnaryCallSettings<UpdateSavedQueryRequest, SavedQuery> updateSavedQuerySettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).updateSavedQuerySettings();
+  }
+
+  /** Returns the object with the settings used for calls to deleteSavedQuery. */
+  public UnaryCallSettings<DeleteSavedQueryRequest, Empty> deleteSavedQuerySettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).deleteSavedQuerySettings();
+  }
+
+  /** Returns the object with the settings used for calls to batchGetEffectiveIamPolicies. */
+  public UnaryCallSettings<
+          BatchGetEffectiveIamPoliciesRequest, BatchGetEffectiveIamPoliciesResponse>
+      batchGetEffectiveIamPoliciesSettings() {
+    return ((AssetServiceStubSettings) getStubSettings()).batchGetEffectiveIamPoliciesSettings();
+  }
+
   public static final AssetServiceSettings create(AssetServiceStubSettings stub)
       throws IOException {
     return new AssetServiceSettings.Builder(stub.toBuilder()).build();
@@ -189,9 +227,16 @@ public class AssetServiceSettings extends ClientSettings<AssetServiceSettings> {
     return AssetServiceStubSettings.defaultCredentialsProviderBuilder();
   }
 
-  /** Returns a builder for the default ChannelProvider for this service. */
+  /** Returns a builder for the default gRPC ChannelProvider for this service. */
   public static InstantiatingGrpcChannelProvider.Builder defaultGrpcTransportProviderBuilder() {
     return AssetServiceStubSettings.defaultGrpcTransportProviderBuilder();
+  }
+
+  /** Returns a builder for the default REST ChannelProvider for this service. */
+  @BetaApi
+  public static InstantiatingHttpJsonChannelProvider.Builder
+      defaultHttpJsonTransportProviderBuilder() {
+    return AssetServiceStubSettings.defaultHttpJsonTransportProviderBuilder();
   }
 
   public static TransportChannelProvider defaultTransportChannelProvider() {
@@ -203,9 +248,15 @@ public class AssetServiceSettings extends ClientSettings<AssetServiceSettings> {
     return AssetServiceStubSettings.defaultApiClientHeaderProviderBuilder();
   }
 
-  /** Returns a new builder for this class. */
+  /** Returns a new gRPC builder for this class. */
   public static Builder newBuilder() {
     return Builder.createDefault();
+  }
+
+  /** Returns a new REST builder for this class. */
+  @BetaApi
+  public static Builder newHttpJsonBuilder() {
+    return Builder.createHttpJsonDefault();
   }
 
   /** Returns a new builder for this class. */
@@ -243,6 +294,11 @@ public class AssetServiceSettings extends ClientSettings<AssetServiceSettings> {
 
     private static Builder createDefault() {
       return new Builder(AssetServiceStubSettings.newBuilder());
+    }
+
+    @BetaApi
+    private static Builder createHttpJsonDefault() {
+      return new Builder(AssetServiceStubSettings.newHttpJsonBuilder());
     }
 
     public AssetServiceStubSettings.Builder getStubSettingsBuilder() {
@@ -351,6 +407,42 @@ public class AssetServiceSettings extends ClientSettings<AssetServiceSettings> {
     public UnaryCallSettings.Builder<AnalyzeMoveRequest, AnalyzeMoveResponse>
         analyzeMoveSettings() {
       return getStubSettingsBuilder().analyzeMoveSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createSavedQuery. */
+    public UnaryCallSettings.Builder<CreateSavedQueryRequest, SavedQuery>
+        createSavedQuerySettings() {
+      return getStubSettingsBuilder().createSavedQuerySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to getSavedQuery. */
+    public UnaryCallSettings.Builder<GetSavedQueryRequest, SavedQuery> getSavedQuerySettings() {
+      return getStubSettingsBuilder().getSavedQuerySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to listSavedQueries. */
+    public PagedCallSettings.Builder<
+            ListSavedQueriesRequest, ListSavedQueriesResponse, ListSavedQueriesPagedResponse>
+        listSavedQueriesSettings() {
+      return getStubSettingsBuilder().listSavedQueriesSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to updateSavedQuery. */
+    public UnaryCallSettings.Builder<UpdateSavedQueryRequest, SavedQuery>
+        updateSavedQuerySettings() {
+      return getStubSettingsBuilder().updateSavedQuerySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to deleteSavedQuery. */
+    public UnaryCallSettings.Builder<DeleteSavedQueryRequest, Empty> deleteSavedQuerySettings() {
+      return getStubSettingsBuilder().deleteSavedQuerySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to batchGetEffectiveIamPolicies. */
+    public UnaryCallSettings.Builder<
+            BatchGetEffectiveIamPoliciesRequest, BatchGetEffectiveIamPoliciesResponse>
+        batchGetEffectiveIamPoliciesSettings() {
+      return getStubSettingsBuilder().batchGetEffectiveIamPoliciesSettings();
     }
 
     @Override

@@ -164,6 +164,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -265,9 +267,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * specified asset_names or asset_types are exported to the feed.
    * Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-   * See [Resource
-   * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more info.
+   * For a list of the full names for supported asset types, see [Resource
+   * name format](/asset-inventory/docs/resource-name-format).
    * </pre>
    *
    * <code>repeated string asset_names = 2;</code>
@@ -286,9 +287,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * specified asset_names or asset_types are exported to the feed.
    * Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-   * See [Resource
-   * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more info.
+   * For a list of the full names for supported asset types, see [Resource
+   * name format](/asset-inventory/docs/resource-name-format).
    * </pre>
    *
    * <code>repeated string asset_names = 2;</code>
@@ -307,9 +307,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * specified asset_names or asset_types are exported to the feed.
    * Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-   * See [Resource
-   * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more info.
+   * For a list of the full names for supported asset types, see [Resource
+   * name format](/asset-inventory/docs/resource-name-format).
    * </pre>
    *
    * <code>repeated string asset_names = 2;</code>
@@ -329,9 +328,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * specified asset_names or asset_types are exported to the feed.
    * Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-   * See [Resource
-   * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more info.
+   * For a list of the full names for supported asset types, see [Resource
+   * name format](/asset-inventory/docs/resource-name-format).
    * </pre>
    *
    * <code>repeated string asset_names = 2;</code>
@@ -353,9 +351,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * or both of asset_names and asset_types. Only asset updates matching
    * specified asset_names or asset_types are exported to the feed.
    * Example: `"compute.googleapis.com/Disk"`
-   * See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-   * for a list of all supported asset types.
+   * For a list of all supported asset types, see
+   * [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * </pre>
    *
    * <code>repeated string asset_types = 3;</code>
@@ -373,9 +370,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * or both of asset_names and asset_types. Only asset updates matching
    * specified asset_names or asset_types are exported to the feed.
    * Example: `"compute.googleapis.com/Disk"`
-   * See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-   * for a list of all supported asset types.
+   * For a list of all supported asset types, see
+   * [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * </pre>
    *
    * <code>repeated string asset_types = 3;</code>
@@ -393,9 +389,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * or both of asset_names and asset_types. Only asset updates matching
    * specified asset_names or asset_types are exported to the feed.
    * Example: `"compute.googleapis.com/Disk"`
-   * See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-   * for a list of all supported asset types.
+   * For a list of all supported asset types, see
+   * [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * </pre>
    *
    * <code>repeated string asset_types = 3;</code>
@@ -414,9 +409,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
    * or both of asset_names and asset_types. Only asset updates matching
    * specified asset_names or asset_types are exported to the feed.
    * Example: `"compute.googleapis.com/Disk"`
-   * See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-   * for a list of all supported asset types.
+   * For a list of all supported asset types, see
+   * [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * </pre>
    *
    * <code>repeated string asset_types = 3;</code>
@@ -734,7 +728,7 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     for (int i = 0; i < assetNames_.size(); i++) {
@@ -765,7 +759,7 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     {
@@ -1360,9 +1354,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1381,9 +1374,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1402,9 +1394,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1424,9 +1415,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1446,9 +1436,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1475,9 +1464,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1503,9 +1491,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1528,9 +1515,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1552,9 +1538,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * specified asset_names or asset_types are exported to the feed.
      * Example:
      * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-     * See [Resource
-     * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-     * for more info.
+     * For a list of the full names for supported asset types, see [Resource
+     * name format](/asset-inventory/docs/resource-name-format).
      * </pre>
      *
      * <code>repeated string asset_names = 2;</code>
@@ -1590,9 +1575,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1610,9 +1594,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1630,9 +1613,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1651,9 +1633,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1672,9 +1653,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1700,9 +1680,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1727,9 +1706,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1751,9 +1729,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>
@@ -1774,9 +1751,8 @@ public final class Feed extends com.google.protobuf.GeneratedMessageV3
      * or both of asset_names and asset_types. Only asset updates matching
      * specified asset_names or asset_types are exported to the feed.
      * Example: `"compute.googleapis.com/Disk"`
-     * See [this
-     * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
-     * for a list of all supported asset types.
+     * For a list of all supported asset types, see
+     * [Supported asset types](/asset-inventory/docs/supported-asset-types).
      * </pre>
      *
      * <code>repeated string asset_types = 3;</code>

@@ -122,6 +122,8 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -154,7 +156,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
    * Required. The BigQuery dataset in format
    * "projects/projectId/datasets/datasetId", to which the snapshot result
    * should be exported. If this dataset does not exist, the export call returns
-   * an INVALID_ARGUMENT error.
+   * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+   * determines the
+   * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+   * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+   * influences the schema.
    * </pre>
    *
    * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -180,7 +186,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
    * Required. The BigQuery dataset in format
    * "projects/projectId/datasets/datasetId", to which the snapshot result
    * should be exported. If this dataset does not exist, the export call returns
-   * an INVALID_ARGUMENT error.
+   * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+   * determines the
+   * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+   * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+   * influences the schema.
    * </pre>
    *
    * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -419,10 +429,10 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getDatasetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataset_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
     }
-    if (!getTableBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, table_);
     }
     if (force_ != false) {
@@ -443,10 +453,10 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
     if (size != -1) return size;
 
     size = 0;
-    if (!getDatasetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataset_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
     }
-    if (!getTableBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, table_);
     }
     if (force_ != false) {
@@ -803,7 +813,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
      * Required. The BigQuery dataset in format
      * "projects/projectId/datasets/datasetId", to which the snapshot result
      * should be exported. If this dataset does not exist, the export call returns
-     * an INVALID_ARGUMENT error.
+     * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+     * determines the
+     * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+     * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+     * influences the schema.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -828,7 +842,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
      * Required. The BigQuery dataset in format
      * "projects/projectId/datasets/datasetId", to which the snapshot result
      * should be exported. If this dataset does not exist, the export call returns
-     * an INVALID_ARGUMENT error.
+     * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+     * determines the
+     * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+     * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+     * influences the schema.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -853,7 +871,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
      * Required. The BigQuery dataset in format
      * "projects/projectId/datasets/datasetId", to which the snapshot result
      * should be exported. If this dataset does not exist, the export call returns
-     * an INVALID_ARGUMENT error.
+     * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+     * determines the
+     * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+     * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+     * influences the schema.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -877,7 +899,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
      * Required. The BigQuery dataset in format
      * "projects/projectId/datasets/datasetId", to which the snapshot result
      * should be exported. If this dataset does not exist, the export call returns
-     * an INVALID_ARGUMENT error.
+     * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+     * determines the
+     * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+     * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+     * influences the schema.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -897,7 +923,11 @@ public final class BigQueryDestination extends com.google.protobuf.GeneratedMess
      * Required. The BigQuery dataset in format
      * "projects/projectId/datasets/datasetId", to which the snapshot result
      * should be exported. If this dataset does not exist, the export call returns
-     * an INVALID_ARGUMENT error.
+     * an INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets`
+     * determines the
+     * [schema](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema)
+     * of the BigQuery table. Setting `separateTablesPerAssetType` to `TRUE` also
+     * influences the schema.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>

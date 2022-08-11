@@ -11,7 +11,7 @@ Java idiomatic client for [Cloud Asset Inventory][product-docs].
 
 ## Quickstart
 
-If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
+If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file:
 
 ```xml
 <dependencyManagement>
@@ -19,7 +19,7 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>libraries-bom</artifactId>
-      <version>22.0.0</version>
+      <version>26.0.0</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -42,28 +42,28 @@ If you are using Maven without BOM, add this to your dependencies:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-asset</artifactId>
-  <version>3.1.0</version>
+  <version>3.4.1</version>
 </dependency>
 
 ```
 
-If you are using Gradle 5.x or later, add this to your dependencies
+If you are using Gradle 5.x or later, add this to your dependencies:
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:22.0.0')
+implementation platform('com.google.cloud:libraries-bom:26.0.0')
 
 implementation 'com.google.cloud:google-cloud-asset'
 ```
-If you are using Gradle without BOM, add this to your dependencies
+If you are using Gradle without BOM, add this to your dependencies:
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-asset:3.1.0'
+implementation 'com.google.cloud:google-cloud-asset:3.4.1'
 ```
 
-If you are using SBT, add this to your dependencies
+If you are using SBT, add this to your dependencies:
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "3.1.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "3.4.1"
 ```
 
 ## Authentication
@@ -103,24 +103,24 @@ use this Cloud Asset Inventory Client Library.
 
 ## Samples
 
-Samples are in the [`samples/`](https://github.com/googleapis/java-asset/tree/master/samples) directory.
+Samples are in the [`samples/`](https://github.com/googleapis/java-asset/tree/main/samples) directory.
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
-| Analyze Iam Policy Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyExample.java) |
-| Analyze Iam Policy Longrunning Bigquery Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningBigqueryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningBigqueryExample.java) |
-| Analyze Iam Policy Longrunning Gcs Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningGcsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningGcsExample.java) |
-| Batch Get Assets History Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/BatchGetAssetsHistoryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/BatchGetAssetsHistoryExample.java) |
-| Create Feed Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/CreateFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/CreateFeedExample.java) |
-| Delete Feed Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/DeleteFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/DeleteFeedExample.java) |
-| Export Assets Bigquery Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) |
-| Export Assets Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) |
-| Get Feed Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) |
-| List Assets Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) |
-| List Feeds Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) |
-| Search All Iam Policies Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) |
-| Search All Resources Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) |
-| Update Feed Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/UpdateFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/UpdateFeedExample.java) |
+| Analyze Iam Policy Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyExample.java) |
+| Analyze Iam Policy Longrunning Bigquery Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningBigqueryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningBigqueryExample.java) |
+| Analyze Iam Policy Longrunning Gcs Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningGcsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/AnalyzeIamPolicyLongrunningGcsExample.java) |
+| Batch Get Assets History Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/BatchGetAssetsHistoryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/BatchGetAssetsHistoryExample.java) |
+| Create Feed Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/CreateFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/CreateFeedExample.java) |
+| Delete Feed Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/DeleteFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/DeleteFeedExample.java) |
+| Export Assets Bigquery Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) |
+| Export Assets Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) |
+| Get Feed Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) |
+| List Assets Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) |
+| List Feeds Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) |
+| Search All Iam Policies Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) |
+| Search All Resources Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) |
+| Update Feed Example | [source code](https://github.com/googleapis/java-asset/blob/main/samples/snippets/src/main/java/com/example/asset/UpdateFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/UpdateFeedExample.java) |
 
 
 
@@ -134,7 +134,7 @@ Cloud Asset Inventory uses gRPC for the transport layer.
 
 ## Supported Java Versions
 
-Java 7 or above is required for using this client.
+Java 8 or above is required for using this client.
 
 Google's Java client libraries,
 [Google Cloud Client Libraries][cloudlibs]
@@ -203,7 +203,6 @@ Apache 2.0 - See [LICENSE][license] for more information.
 
 Java Version | Status
 ------------ | ------
-Java 7 | [![Kokoro CI][kokoro-badge-image-1]][kokoro-badge-link-1]
 Java 8 | [![Kokoro CI][kokoro-badge-image-2]][kokoro-badge-link-2]
 Java 8 OSX | [![Kokoro CI][kokoro-badge-image-3]][kokoro-badge-link-3]
 Java 8 Windows | [![Kokoro CI][kokoro-badge-image-4]][kokoro-badge-link-4]
@@ -212,7 +211,7 @@ Java 11 | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5]
 Java is a registered trademark of Oracle and/or its affiliates.
 
 [product-docs]: https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview
-[javadocs]: https://googleapis.dev/java/google-cloud-asset/latest/index.html
+[javadocs]: https://cloud.google.com/java/docs/reference/google-cloud-asset/latest/history
 [kokoro-badge-image-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java7.svg
 [kokoro-badge-link-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java7.html
 [kokoro-badge-image-2]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java8.svg
@@ -223,7 +222,7 @@ Java is a registered trademark of Oracle and/or its affiliates.
 [kokoro-badge-link-4]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java8-win.html
 [kokoro-badge-image-5]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java11.svg
 [kokoro-badge-link-5]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java11.html
-[stability-image]: https://img.shields.io/badge/stability-ga-green
+[stability-image]: https://img.shields.io/badge/stability-stable-green
 [maven-version-image]: https://img.shields.io/maven-central/v/com.google.cloud/google-cloud-asset.svg
 [maven-version-link]: https://search.maven.org/search?q=g:com.google.cloud%20AND%20a:google-cloud-asset&core=gav
 [authentication]: https://github.com/googleapis/google-cloud-java#authentication
@@ -233,10 +232,10 @@ Java is a registered trademark of Oracle and/or its affiliates.
 [developer-console]: https://console.developers.google.com/
 [create-project]: https://cloud.google.com/resource-manager/docs/creating-managing-projects
 [cloud-sdk]: https://cloud.google.com/sdk/
-[troubleshooting]: https://github.com/googleapis/google-cloud-common/blob/master/troubleshooting/readme.md#troubleshooting
-[contributing]: https://github.com/googleapis/java-asset/blob/master/CONTRIBUTING.md
-[code-of-conduct]: https://github.com/googleapis/java-asset/blob/master/CODE_OF_CONDUCT.md#contributor-code-of-conduct
-[license]: https://github.com/googleapis/java-asset/blob/master/LICENSE
+[troubleshooting]: https://github.com/googleapis/google-cloud-common/blob/main/troubleshooting/readme.md#troubleshooting
+[contributing]: https://github.com/googleapis/java-asset/blob/main/CONTRIBUTING.md
+[code-of-conduct]: https://github.com/googleapis/java-asset/blob/main/CODE_OF_CONDUCT.md#contributor-code-of-conduct
+[license]: https://github.com/googleapis/java-asset/blob/main/LICENSE
 [enable-billing]: https://cloud.google.com/apis/docs/getting-started#enabling_billing
 [enable-api]: https://console.cloud.google.com/flows/enableapi?apiid=cloudasset.googleapis.com
 [libraries-bom]: https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/The-Google-Cloud-Platform-Libraries-BOM

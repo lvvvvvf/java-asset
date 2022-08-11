@@ -112,6 +112,8 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -239,7 +241,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Destination on BigQuery. The output table stores the fields in asset
-   * proto as columns in BigQuery.
+   * Protobuf as columns in BigQuery.
    * </pre>
    *
    * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -255,7 +257,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Destination on BigQuery. The output table stores the fields in asset
-   * proto as columns in BigQuery.
+   * Protobuf as columns in BigQuery.
    * </pre>
    *
    * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -274,7 +276,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Destination on BigQuery. The output table stores the fields in asset
-   * proto as columns in BigQuery.
+   * Protobuf as columns in BigQuery.
    * </pre>
    *
    * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -784,8 +786,9 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
       } else {
         if (destinationCase_ == 1) {
           gcsDestinationBuilder_.mergeFrom(value);
+        } else {
+          gcsDestinationBuilder_.setMessage(value);
         }
-        gcsDestinationBuilder_.setMessage(value);
       }
       destinationCase_ = 1;
       return this;
@@ -891,7 +894,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -907,7 +910,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -933,7 +936,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -956,7 +959,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -977,7 +980,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -998,8 +1001,9 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
       } else {
         if (destinationCase_ == 2) {
           bigqueryDestinationBuilder_.mergeFrom(value);
+        } else {
+          bigqueryDestinationBuilder_.setMessage(value);
         }
-        bigqueryDestinationBuilder_.setMessage(value);
       }
       destinationCase_ = 2;
       return this;
@@ -1009,7 +1013,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -1035,7 +1039,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -1048,7 +1052,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>
@@ -1070,7 +1074,7 @@ public final class OutputConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Destination on BigQuery. The output table stores the fields in asset
-     * proto as columns in BigQuery.
+     * Protobuf as columns in BigQuery.
      * </pre>
      *
      * <code>.google.cloud.asset.v1.BigQueryDestination bigquery_destination = 2;</code>

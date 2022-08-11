@@ -22,7 +22,7 @@ package com.google.cloud.asset.v1;
  *
  *
  * <pre>
- * ## IAM policy analysis query message.
+ * IAM policy analysis query message.
  * </pre>
  *
  * Protobuf type {@code google.cloud.asset.v1.IamPolicyAnalysisQuery}
@@ -177,6 +177,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
@@ -308,6 +310,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
@@ -400,7 +404,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getFullResourceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullResourceName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fullResourceName_);
       }
       unknownFields.writeTo(output);
@@ -412,7 +416,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
       if (size != -1) return size;
 
       size = 0;
-      if (!getFullResourceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullResourceName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fullResourceName_);
       }
       size += unknownFields.getSerializedSize();
@@ -904,7 +908,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The identity appear in the form of members in
+     * Required. The identity appear in the form of principals in
      * [IAM policy
      * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
      * The examples of supported forms are:
@@ -925,7 +929,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The identity appear in the form of members in
+     * Required. The identity appear in the form of principals in
      * [IAM policy
      * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
      * The examples of supported forms are:
@@ -1015,6 +1019,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
@@ -1044,7 +1050,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The identity appear in the form of members in
+     * Required. The identity appear in the form of principals in
      * [IAM policy
      * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
      * The examples of supported forms are:
@@ -1076,7 +1082,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The identity appear in the form of members in
+     * Required. The identity appear in the form of principals in
      * [IAM policy
      * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
      * The examples of supported forms are:
@@ -1119,7 +1125,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getIdentityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identity_);
       }
       unknownFields.writeTo(output);
@@ -1131,7 +1137,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdentityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identity_);
       }
       size += unknownFields.getSerializedSize();
@@ -1443,7 +1449,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Required. The identity appear in the form of members in
+       * Required. The identity appear in the form of principals in
        * [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
        * The examples of supported forms are:
@@ -1474,7 +1480,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Required. The identity appear in the form of members in
+       * Required. The identity appear in the form of principals in
        * [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
        * The examples of supported forms are:
@@ -1505,7 +1511,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Required. The identity appear in the form of members in
+       * Required. The identity appear in the form of principals in
        * [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
        * The examples of supported forms are:
@@ -1535,7 +1541,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Required. The identity appear in the form of members in
+       * Required. The identity appear in the form of principals in
        * [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
        * The examples of supported forms are:
@@ -1561,7 +1567,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Required. The identity appear in the form of members in
+       * Required. The identity appear in the form of principals in
        * [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
        * The examples of supported forms are:
@@ -1840,6 +1846,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
@@ -2779,9 +2787,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. If true, the identities section of the result will expand any
      * Google groups appearing in an IAM policy binding.
-     * If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-     * identity in the result will be determined by the selector, and this flag
-     * is not allowed to set.
+     * If
+     * [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+     * is specified, the identity in the result will be determined by the
+     * selector, and this flag is not allowed to set.
+     * If true, the default max expansion per group is 1000 for
+     * AssetService.AnalyzeIamPolicy][].
      * Default is false.
      * </pre>
      *
@@ -2797,9 +2808,10 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. If true, the access section of result will expand any roles
      * appearing in IAM policy bindings to include their permissions.
-     * If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-     * section of the result will be determined by the selector, and this flag
-     * is not allowed to set.
+     * If
+     * [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+     * is specified, the access section of the result will be determined by the
+     * selector, and this flag is not allowed to set.
      * Default is false.
      * </pre>
      *
@@ -2813,22 +2825,27 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-     * specified, the resource section of the result will expand any resource
-     * attached to an IAM policy to include resources lower in the resource
-     * hierarchy.
+     * Optional. If true and
+     * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+     * is not specified, the resource section of the result will expand any
+     * resource attached to an IAM policy to include resources lower in the
+     * resource hierarchy.
      * For example, if the request analyzes for which resources user A has
      * permission P, and the results include an IAM policy with P on a GCP
      * folder, the results will also include resources in that folder with
      * permission P.
-     * If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-     * the resource section of the result will expand the specified resource to
-     * include resources lower in the resource hierarchy. Only project or
-     * lower resources are supported. Folder and organization resource cannot be
-     * used together with this option.
+     * If true and
+     * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+     * is specified, the resource section of the result will expand the
+     * specified resource to include resources lower in the resource hierarchy.
+     * Only project or lower resources are supported. Folder and organization
+     * resource cannot be used together with this option.
      * For example, if the request analyzes for which users have permission P on
      * a GCP project with this option enabled, the results will include all
      * users who have permission P on that project or any lower resource.
+     * If true, the default max expansion per resource is 1000 for
+     * AssetService.AnalyzeIamPolicy][] and 100000 for
+     * AssetService.AnalyzeIamPolicyLongrunning][].
      * Default is false.
      * </pre>
      *
@@ -2842,9 +2859,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the result will output resource edges, starting
-     * from the policy attached resource, to any expanded resources.
-     * Default is false.
+     * Optional. If true, the result will output the relevant parent/child
+     * relationships between resources. Default is false.
      * </pre>
      *
      * <code>bool output_resource_edges = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2857,9 +2873,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the result will output group identity edges, starting
-     * from the binding's group members, to any expanded identities.
-     * Default is false.
+     * Optional. If true, the result will output the relevant membership
+     * relationships between groups and other groups, and between groups and
+     * principals. Default is false.
      * </pre>
      *
      * <code>bool output_group_edges = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2872,11 +2888,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the response will include access analysis from identities to
-     * resources via service account impersonation. This is a very expensive
-     * operation, because many derived queries will be executed. We highly
-     * recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-     * instead.
+     * Optional. If true, the response will include access analysis from
+     * identities to resources via service account impersonation. This is a very
+     * expensive operation, because many derived queries will be executed. We
+     * highly recommend you use
+     * [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+     * rpc instead.
      * For example, if the request analyzes for which resources user A has
      * permission P, and there's an IAM policy states user A has
      * iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -2891,6 +2908,13 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * the GCP folder F, then user A potentially has access to the GCP folder
      * F. And those advanced analysis results will be included in
      * [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+     * Only the following permissions are considered in this analysis:
+     * * `iam.serviceAccounts.actAs`
+     * * `iam.serviceAccounts.signBlob`
+     * * `iam.serviceAccounts.signJwt`
+     * * `iam.serviceAccounts.getAccessToken`
+     * * `iam.serviceAccounts.getOpenIdToken`
+     * * `iam.serviceAccounts.implicitDelegation`
      * Default is false.
      * </pre>
      *
@@ -2993,6 +3017,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
@@ -3024,9 +3050,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. If true, the identities section of the result will expand any
      * Google groups appearing in an IAM policy binding.
-     * If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-     * identity in the result will be determined by the selector, and this flag
-     * is not allowed to set.
+     * If
+     * [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+     * is specified, the identity in the result will be determined by the
+     * selector, and this flag is not allowed to set.
+     * If true, the default max expansion per group is 1000 for
+     * AssetService.AnalyzeIamPolicy][].
      * Default is false.
      * </pre>
      *
@@ -3047,9 +3076,10 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. If true, the access section of result will expand any roles
      * appearing in IAM policy bindings to include their permissions.
-     * If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-     * section of the result will be determined by the selector, and this flag
-     * is not allowed to set.
+     * If
+     * [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+     * is specified, the access section of the result will be determined by the
+     * selector, and this flag is not allowed to set.
      * Default is false.
      * </pre>
      *
@@ -3068,22 +3098,27 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-     * specified, the resource section of the result will expand any resource
-     * attached to an IAM policy to include resources lower in the resource
-     * hierarchy.
+     * Optional. If true and
+     * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+     * is not specified, the resource section of the result will expand any
+     * resource attached to an IAM policy to include resources lower in the
+     * resource hierarchy.
      * For example, if the request analyzes for which resources user A has
      * permission P, and the results include an IAM policy with P on a GCP
      * folder, the results will also include resources in that folder with
      * permission P.
-     * If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-     * the resource section of the result will expand the specified resource to
-     * include resources lower in the resource hierarchy. Only project or
-     * lower resources are supported. Folder and organization resource cannot be
-     * used together with this option.
+     * If true and
+     * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+     * is specified, the resource section of the result will expand the
+     * specified resource to include resources lower in the resource hierarchy.
+     * Only project or lower resources are supported. Folder and organization
+     * resource cannot be used together with this option.
      * For example, if the request analyzes for which users have permission P on
      * a GCP project with this option enabled, the results will include all
      * users who have permission P on that project or any lower resource.
+     * If true, the default max expansion per resource is 1000 for
+     * AssetService.AnalyzeIamPolicy][] and 100000 for
+     * AssetService.AnalyzeIamPolicyLongrunning][].
      * Default is false.
      * </pre>
      *
@@ -3102,9 +3137,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the result will output resource edges, starting
-     * from the policy attached resource, to any expanded resources.
-     * Default is false.
+     * Optional. If true, the result will output the relevant parent/child
+     * relationships between resources. Default is false.
      * </pre>
      *
      * <code>bool output_resource_edges = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3122,9 +3156,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the result will output group identity edges, starting
-     * from the binding's group members, to any expanded identities.
-     * Default is false.
+     * Optional. If true, the result will output the relevant membership
+     * relationships between groups and other groups, and between groups and
+     * principals. Default is false.
      * </pre>
      *
      * <code>bool output_group_edges = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3142,11 +3176,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. If true, the response will include access analysis from identities to
-     * resources via service account impersonation. This is a very expensive
-     * operation, because many derived queries will be executed. We highly
-     * recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-     * instead.
+     * Optional. If true, the response will include access analysis from
+     * identities to resources via service account impersonation. This is a very
+     * expensive operation, because many derived queries will be executed. We
+     * highly recommend you use
+     * [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+     * rpc instead.
      * For example, if the request analyzes for which resources user A has
      * permission P, and there's an IAM policy states user A has
      * iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -3161,6 +3196,13 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      * the GCP folder F, then user A potentially has access to the GCP folder
      * F. And those advanced analysis results will be included in
      * [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+     * Only the following permissions are considered in this analysis:
+     * * `iam.serviceAccounts.actAs`
+     * * `iam.serviceAccounts.signBlob`
+     * * `iam.serviceAccounts.signJwt`
+     * * `iam.serviceAccounts.getAccessToken`
+     * * `iam.serviceAccounts.getOpenIdToken`
+     * * `iam.serviceAccounts.implicitDelegation`
      * Default is false.
      * </pre>
      *
@@ -3584,9 +3626,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the identities section of the result will expand any
        * Google groups appearing in an IAM policy binding.
-       * If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-       * identity in the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+       * is specified, the identity in the result will be determined by the
+       * selector, and this flag is not allowed to set.
+       * If true, the default max expansion per group is 1000 for
+       * AssetService.AnalyzeIamPolicy][].
        * Default is false.
        * </pre>
        *
@@ -3604,9 +3649,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the identities section of the result will expand any
        * Google groups appearing in an IAM policy binding.
-       * If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-       * identity in the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+       * is specified, the identity in the result will be determined by the
+       * selector, and this flag is not allowed to set.
+       * If true, the default max expansion per group is 1000 for
+       * AssetService.AnalyzeIamPolicy][].
        * Default is false.
        * </pre>
        *
@@ -3627,9 +3675,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the identities section of the result will expand any
        * Google groups appearing in an IAM policy binding.
-       * If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-       * identity in the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+       * is specified, the identity in the result will be determined by the
+       * selector, and this flag is not allowed to set.
+       * If true, the default max expansion per group is 1000 for
+       * AssetService.AnalyzeIamPolicy][].
        * Default is false.
        * </pre>
        *
@@ -3651,9 +3702,10 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the access section of result will expand any roles
        * appearing in IAM policy bindings to include their permissions.
-       * If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-       * section of the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+       * is specified, the access section of the result will be determined by the
+       * selector, and this flag is not allowed to set.
        * Default is false.
        * </pre>
        *
@@ -3671,9 +3723,10 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the access section of result will expand any roles
        * appearing in IAM policy bindings to include their permissions.
-       * If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-       * section of the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+       * is specified, the access section of the result will be determined by the
+       * selector, and this flag is not allowed to set.
        * Default is false.
        * </pre>
        *
@@ -3694,9 +3747,10 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * <pre>
        * Optional. If true, the access section of result will expand any roles
        * appearing in IAM policy bindings to include their permissions.
-       * If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-       * section of the result will be determined by the selector, and this flag
-       * is not allowed to set.
+       * If
+       * [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+       * is specified, the access section of the result will be determined by the
+       * selector, and this flag is not allowed to set.
        * Default is false.
        * </pre>
        *
@@ -3716,22 +3770,27 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-       * specified, the resource section of the result will expand any resource
-       * attached to an IAM policy to include resources lower in the resource
-       * hierarchy.
+       * Optional. If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is not specified, the resource section of the result will expand any
+       * resource attached to an IAM policy to include resources lower in the
+       * resource hierarchy.
        * For example, if the request analyzes for which resources user A has
        * permission P, and the results include an IAM policy with P on a GCP
        * folder, the results will also include resources in that folder with
        * permission P.
-       * If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-       * the resource section of the result will expand the specified resource to
-       * include resources lower in the resource hierarchy. Only project or
-       * lower resources are supported. Folder and organization resource cannot be
-       * used together with this option.
+       * If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is specified, the resource section of the result will expand the
+       * specified resource to include resources lower in the resource hierarchy.
+       * Only project or lower resources are supported. Folder and organization
+       * resource cannot be used together with this option.
        * For example, if the request analyzes for which users have permission P on
        * a GCP project with this option enabled, the results will include all
        * users who have permission P on that project or any lower resource.
+       * If true, the default max expansion per resource is 1000 for
+       * AssetService.AnalyzeIamPolicy][] and 100000 for
+       * AssetService.AnalyzeIamPolicyLongrunning][].
        * Default is false.
        * </pre>
        *
@@ -3747,22 +3806,27 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-       * specified, the resource section of the result will expand any resource
-       * attached to an IAM policy to include resources lower in the resource
-       * hierarchy.
+       * Optional. If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is not specified, the resource section of the result will expand any
+       * resource attached to an IAM policy to include resources lower in the
+       * resource hierarchy.
        * For example, if the request analyzes for which resources user A has
        * permission P, and the results include an IAM policy with P on a GCP
        * folder, the results will also include resources in that folder with
        * permission P.
-       * If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-       * the resource section of the result will expand the specified resource to
-       * include resources lower in the resource hierarchy. Only project or
-       * lower resources are supported. Folder and organization resource cannot be
-       * used together with this option.
+       * If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is specified, the resource section of the result will expand the
+       * specified resource to include resources lower in the resource hierarchy.
+       * Only project or lower resources are supported. Folder and organization
+       * resource cannot be used together with this option.
        * For example, if the request analyzes for which users have permission P on
        * a GCP project with this option enabled, the results will include all
        * users who have permission P on that project or any lower resource.
+       * If true, the default max expansion per resource is 1000 for
+       * AssetService.AnalyzeIamPolicy][] and 100000 for
+       * AssetService.AnalyzeIamPolicyLongrunning][].
        * Default is false.
        * </pre>
        *
@@ -3781,22 +3845,27 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-       * specified, the resource section of the result will expand any resource
-       * attached to an IAM policy to include resources lower in the resource
-       * hierarchy.
+       * Optional. If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is not specified, the resource section of the result will expand any
+       * resource attached to an IAM policy to include resources lower in the
+       * resource hierarchy.
        * For example, if the request analyzes for which resources user A has
        * permission P, and the results include an IAM policy with P on a GCP
        * folder, the results will also include resources in that folder with
        * permission P.
-       * If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-       * the resource section of the result will expand the specified resource to
-       * include resources lower in the resource hierarchy. Only project or
-       * lower resources are supported. Folder and organization resource cannot be
-       * used together with this option.
+       * If true and
+       * [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+       * is specified, the resource section of the result will expand the
+       * specified resource to include resources lower in the resource hierarchy.
+       * Only project or lower resources are supported. Folder and organization
+       * resource cannot be used together with this option.
        * For example, if the request analyzes for which users have permission P on
        * a GCP project with this option enabled, the results will include all
        * users who have permission P on that project or any lower resource.
+       * If true, the default max expansion per resource is 1000 for
+       * AssetService.AnalyzeIamPolicy][] and 100000 for
+       * AssetService.AnalyzeIamPolicyLongrunning][].
        * Default is false.
        * </pre>
        *
@@ -3816,9 +3885,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output resource edges, starting
-       * from the policy attached resource, to any expanded resources.
-       * Default is false.
+       * Optional. If true, the result will output the relevant parent/child
+       * relationships between resources. Default is false.
        * </pre>
        *
        * <code>bool output_resource_edges = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3833,9 +3901,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output resource edges, starting
-       * from the policy attached resource, to any expanded resources.
-       * Default is false.
+       * Optional. If true, the result will output the relevant parent/child
+       * relationships between resources. Default is false.
        * </pre>
        *
        * <code>bool output_resource_edges = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3853,9 +3920,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output resource edges, starting
-       * from the policy attached resource, to any expanded resources.
-       * Default is false.
+       * Optional. If true, the result will output the relevant parent/child
+       * relationships between resources. Default is false.
        * </pre>
        *
        * <code>bool output_resource_edges = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3874,9 +3940,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output group identity edges, starting
-       * from the binding's group members, to any expanded identities.
-       * Default is false.
+       * Optional. If true, the result will output the relevant membership
+       * relationships between groups and other groups, and between groups and
+       * principals. Default is false.
        * </pre>
        *
        * <code>bool output_group_edges = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3891,9 +3957,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output group identity edges, starting
-       * from the binding's group members, to any expanded identities.
-       * Default is false.
+       * Optional. If true, the result will output the relevant membership
+       * relationships between groups and other groups, and between groups and
+       * principals. Default is false.
        * </pre>
        *
        * <code>bool output_group_edges = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3911,9 +3977,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the result will output group identity edges, starting
-       * from the binding's group members, to any expanded identities.
-       * Default is false.
+       * Optional. If true, the result will output the relevant membership
+       * relationships between groups and other groups, and between groups and
+       * principals. Default is false.
        * </pre>
        *
        * <code>bool output_group_edges = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3932,11 +3998,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the response will include access analysis from identities to
-       * resources via service account impersonation. This is a very expensive
-       * operation, because many derived queries will be executed. We highly
-       * recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-       * instead.
+       * Optional. If true, the response will include access analysis from
+       * identities to resources via service account impersonation. This is a very
+       * expensive operation, because many derived queries will be executed. We
+       * highly recommend you use
+       * [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+       * rpc instead.
        * For example, if the request analyzes for which resources user A has
        * permission P, and there's an IAM policy states user A has
        * iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -3951,6 +4018,13 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * the GCP folder F, then user A potentially has access to the GCP folder
        * F. And those advanced analysis results will be included in
        * [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+       * Only the following permissions are considered in this analysis:
+       * * `iam.serviceAccounts.actAs`
+       * * `iam.serviceAccounts.signBlob`
+       * * `iam.serviceAccounts.signJwt`
+       * * `iam.serviceAccounts.getAccessToken`
+       * * `iam.serviceAccounts.getOpenIdToken`
+       * * `iam.serviceAccounts.implicitDelegation`
        * Default is false.
        * </pre>
        *
@@ -3968,11 +4042,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the response will include access analysis from identities to
-       * resources via service account impersonation. This is a very expensive
-       * operation, because many derived queries will be executed. We highly
-       * recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-       * instead.
+       * Optional. If true, the response will include access analysis from
+       * identities to resources via service account impersonation. This is a very
+       * expensive operation, because many derived queries will be executed. We
+       * highly recommend you use
+       * [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+       * rpc instead.
        * For example, if the request analyzes for which resources user A has
        * permission P, and there's an IAM policy states user A has
        * iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -3987,6 +4062,13 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * the GCP folder F, then user A potentially has access to the GCP folder
        * F. And those advanced analysis results will be included in
        * [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+       * Only the following permissions are considered in this analysis:
+       * * `iam.serviceAccounts.actAs`
+       * * `iam.serviceAccounts.signBlob`
+       * * `iam.serviceAccounts.signJwt`
+       * * `iam.serviceAccounts.getAccessToken`
+       * * `iam.serviceAccounts.getOpenIdToken`
+       * * `iam.serviceAccounts.implicitDelegation`
        * Default is false.
        * </pre>
        *
@@ -4007,11 +4089,12 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        *
        *
        * <pre>
-       * Optional. If true, the response will include access analysis from identities to
-       * resources via service account impersonation. This is a very expensive
-       * operation, because many derived queries will be executed. We highly
-       * recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-       * instead.
+       * Optional. If true, the response will include access analysis from
+       * identities to resources via service account impersonation. This is a very
+       * expensive operation, because many derived queries will be executed. We
+       * highly recommend you use
+       * [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+       * rpc instead.
        * For example, if the request analyzes for which resources user A has
        * permission P, and there's an IAM policy states user A has
        * iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -4026,6 +4109,13 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
        * the GCP folder F, then user A potentially has access to the GCP folder
        * F. And those advanced analysis results will be included in
        * [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+       * Only the following permissions are considered in this analysis:
+       * * `iam.serviceAccounts.actAs`
+       * * `iam.serviceAccounts.signBlob`
+       * * `iam.serviceAccounts.signJwt`
+       * * `iam.serviceAccounts.getAccessToken`
+       * * `iam.serviceAccounts.getOpenIdToken`
+       * * `iam.serviceAccounts.implicitDelegation`
        * Default is false.
        * </pre>
        *
@@ -4219,6 +4309,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
@@ -4838,8 +4930,9 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
         } else {
           if (timeContextCase_ == 1) {
             accessTimeBuilder_.mergeFrom(value);
+          } else {
+            accessTimeBuilder_.setMessage(value);
           }
-          accessTimeBuilder_.setMessage(value);
         }
         timeContextCase_ = 1;
         return this;
@@ -5002,8 +5095,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The relative name of the root asset. Only resources and IAM policies within
-   * the scope will be analyzed.
+   * Required. The relative name of the root asset. Only resources and IAM
+   * policies within the scope will be analyzed.
    * This can only be an organization number (such as "organizations/123"), a
    * folder number (such as "folders/123"), a project ID (such as
    * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5033,8 +5126,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The relative name of the root asset. Only resources and IAM policies within
-   * the scope will be analyzed.
+   * Required. The relative name of the root asset. Only resources and IAM
+   * policies within the scope will be analyzed.
    * This can only be an organization number (such as "organizations/123"), a
    * folder number (such as "folders/123"), a project ID (such as
    * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5349,7 +5442,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getScopeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
     }
     if (resourceSelector_ != null) {
@@ -5376,7 +5469,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
     if (size != -1) return size;
 
     size = 0;
-    if (!getScopeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
     }
     if (resourceSelector_ != null) {
@@ -5568,7 +5661,7 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * ## IAM policy analysis query message.
+   * IAM policy analysis query message.
    * </pre>
    *
    * Protobuf type {@code google.cloud.asset.v1.IamPolicyAnalysisQuery}
@@ -5797,8 +5890,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative name of the root asset. Only resources and IAM policies within
-     * the scope will be analyzed.
+     * Required. The relative name of the root asset. Only resources and IAM
+     * policies within the scope will be analyzed.
      * This can only be an organization number (such as "organizations/123"), a
      * folder number (such as "folders/123"), a project ID (such as
      * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5827,8 +5920,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative name of the root asset. Only resources and IAM policies within
-     * the scope will be analyzed.
+     * Required. The relative name of the root asset. Only resources and IAM
+     * policies within the scope will be analyzed.
      * This can only be an organization number (such as "organizations/123"), a
      * folder number (such as "folders/123"), a project ID (such as
      * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5857,8 +5950,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative name of the root asset. Only resources and IAM policies within
-     * the scope will be analyzed.
+     * Required. The relative name of the root asset. Only resources and IAM
+     * policies within the scope will be analyzed.
      * This can only be an organization number (such as "organizations/123"), a
      * folder number (such as "folders/123"), a project ID (such as
      * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5886,8 +5979,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative name of the root asset. Only resources and IAM policies within
-     * the scope will be analyzed.
+     * Required. The relative name of the root asset. Only resources and IAM
+     * policies within the scope will be analyzed.
      * This can only be an organization number (such as "organizations/123"), a
      * folder number (such as "folders/123"), a project ID (such as
      * "projects/my-project-id"), or a project number (such as "projects/12345").
@@ -5911,8 +6004,8 @@ public final class IamPolicyAnalysisQuery extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative name of the root asset. Only resources and IAM policies within
-     * the scope will be analyzed.
+     * Required. The relative name of the root asset. Only resources and IAM
+     * policies within the scope will be analyzed.
      * This can only be an organization number (such as "organizations/123"), a
      * folder number (such as "folders/123"), a project ID (such as
      * "projects/my-project-id"), or a project number (such as "projects/12345").

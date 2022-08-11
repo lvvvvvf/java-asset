@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-asset</artifactId>
-  <version>3.1.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-asset:current} -->
+  <version>3.5.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-asset:current} -->
   <packaging>jar</packaging>
   <name>Google Cloud Asset</name>
   <url>https://github.com/googleapis/java-asset</url>
@@ -11,7 +11,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-asset-parent</artifactId>
-    <version>3.1.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-asset:current} -->
+    <version>3.5.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-asset:current} -->
   </parent>
   <properties>
     <site.installationModule>google-cloud-asset</site.installationModule>
@@ -59,10 +59,6 @@
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
-      <artifactId>proto-google-cloud-asset-v1p4beta1</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-cloud-asset-v1p5beta1</artifactId>
     </dependency>
     <dependency>
@@ -76,6 +72,10 @@
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api</groupId>
+      <artifactId>gax-httpjson</artifactId>
     </dependency>
     <dependency>
       <groupId>org.threeten</groupId>
@@ -130,18 +130,25 @@
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
-      <artifactId>grpc-google-cloud-asset-v1p4beta1</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
       <artifactId>grpc-google-cloud-asset-v1p5beta1</artifactId>
       <scope>test</scope>
     </dependency>
     <!-- Need testing utility classes for generated gRPC clients tests -->
     <dependency>
       <groupId>com.google.api</groupId>
+      <artifactId>gax</artifactId>
+      <classifier>testlib</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
+      <classifier>testlib</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>com.google.api</groupId>
+      <artifactId>gax-httpjson</artifactId>
       <classifier>testlib</classifier>
       <scope>test</scope>
     </dependency>
